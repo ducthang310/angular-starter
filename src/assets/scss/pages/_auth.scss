@@ -1,0 +1,49 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+//***  Simple form
+.sp-form {
+  width: 500px;
+  padding: 40px 60px 50px;
+
+  &__head {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__h-logo {
+    img {
+      width: 60px;
+    }
+  }
+
+  &__h-text {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    margin-top: 30px;
+
+    .btn {
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__link {
+    color: $text-color-default;
+    text-decoration: underline;
+  }
+}
+
+.forgot-link {
+
+}
