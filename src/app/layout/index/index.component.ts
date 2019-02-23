@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+  navFull = true;
+  navChecker = false;
+  navDB = false;
 
   constructor() { }
 

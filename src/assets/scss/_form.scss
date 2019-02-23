@@ -228,11 +228,25 @@
 }
 
 .btn-menu {
+  border: 2px solid #ff0439;
+  border-radius: 50%;
+  width: 40px;
+  padding: 0;
+  height: 40px;
+  line-height: 38px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #ff0439;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: bold;
 
   &:hover {
-    background-color: #ffffff;
-    color: $primary-color;
+    border-color: $primary-color;
+    color: #ffffff;
+  }
+
+  &:after {
+    display: none!important;
   }
 }

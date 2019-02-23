@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
-  isChecking = true;
+  isChecking = false;
 
   constructor(
     private authService: AuthService,

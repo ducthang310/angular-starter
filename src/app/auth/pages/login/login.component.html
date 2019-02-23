@@ -6,20 +6,20 @@
     <form class="sp-form__form" (ngSubmit)="submit()">
       <div class="form-group" [ngClass]="{'has-error': iEmail.invalid && (iEmail.dirty || iEmail.touched)}">
         <div class="input-icon-wrap">
-          <input type="text" placeholder="Email" class="input form-control" id="email" name="email" [(ngModel)]="email" #iEmail="ngModel" required>
+          <input type="email" placeholder="Email" class="input form-control" id="email" name="email" [(ngModel)]="email" #iEmail="ngModel" required>
           <i class="material-icons i-icon">email</i>
         </div>
       </div>
       <div class="form-group" [ngClass]="{'has-error': iPassword.invalid && (iPassword.dirty || iPassword.touched)}">
         <div class="input-icon-wrap">
-          <input type="password" placeholder="Mật khẩu" class="input form-control" id="password" name="password" [(ngModel)]="password" #iPassword="ngModel" required>
+          <input type="password" placeholder="Password" class="input form-control" id="password" name="password" [(ngModel)]="password" #iPassword="ngModel" required>
           <i class="material-icons i-icon">lock</i>
         </div>
       </div>
 
       <div class="form-group sp-form__buttons">
-        <button type="submit" class="btn btn-primary" *ngIf="!isChecking">Login</button>
-        <button type="button" class="btn btn-primary btn-lg btn-loading" *ngIf="isChecking">
+        <button type="submit" class="btn btn-primary" *ngIf="!isChecking" (click)="isChecking = true">Login</button>
+        <button type="button" class="btn btn-primary btn-lg btn-loading" *ngIf="isChecking" (click)="isChecking = false">
           <span class="btn-loading__text">Login</span>
           <div class="btn-loading__wrap">
             <div class="btn-loading__bar"></div>
@@ -27,7 +27,7 @@
         </button>
       </div>
       <div class="txt-center">
-        <a routerLink="/auth/forgot-password" class="sp-form__link">Quên mật khẩu?</a>
+        <a routerLink="/auth/forgot-password" class="sp-form__link">Forgot password?</a>
       </div>
     </form>
   </div>

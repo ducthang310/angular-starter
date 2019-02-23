@@ -19,11 +19,13 @@
           <span><span class="iconmoon icon-home"></span></span> Dashboard
         </a>
       </li>
-      <li class="site-nav__item" routerLinkActive="active">
-        <a routerLink="/checker" class="site-nav__item-head">
+      <li class="site-nav__item" [ngClass]="{'open': navChecker}" routerLinkActive="active">
+        <div class="site-nav__item-head" (click)="navChecker = !navChecker">
           <span><span class="iconmoon icon-binoculars"></span></span> Checker
-          <span class="iconmoon site-nav__arrow">+</span>
-        </a>
+          <span class="iconmoon site-nav__arrow">
+            <i class="material-icons md-16">keyboard_arrow_down</i>
+          </span>
+        </div>
         <ul class="nav-sub">
           <li class="nav-sub__item" routerLinkActive="active">
             <a routerLink="/checker/websites">
@@ -37,9 +39,12 @@
           </li>
         </ul>
       </li>
-      <li class="site-nav__item" routerLinkActive="active">
-        <a routerLink="/backup" class="site-nav__item-head">
+      <li class="site-nav__item" [ngClass]="{'open': navDB}" routerLinkActive="active">
+        <a routerLink="/backup" class="site-nav__item-head" (click)="navDB = !navDB">
           <span><span class="iconmoon icon-database"></span></span> Backup
+          <span class="iconmoon site-nav__arrow">
+            <i class="material-icons md-16">keyboard_arrow_down</i>
+          </span>
         </a>
         <ul class="nav-sub">
           <li class="nav-sub__item" routerLinkActive="active">
@@ -73,7 +78,7 @@
 
           <div ngbDropdown class="d-inline-block" placement="bottom-right" class="m-dropdown">
             <button type="button" class="btn btn-menu" id="dr-top-account" ngbDropdownToggle>
-              <i class="material-icons md-30">apps</i>
+              DT
             </button>
             <div ngbDropdownMenu aria-labelledby="dr-top-account" class="box-shadow">
               <a routerLink="/account" class="dropdown-item a-dark">
