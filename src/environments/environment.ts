@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  baseApiUrl: 'http://api.center.shiroad.local/api'
+  production: false
 };
 
 /*
