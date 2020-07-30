@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" routerLink="/">Erni</a>
+
+<!--  <ul class="navbar-nav px-3">-->
+<!--    <li class="nav-item text-nowrap">-->
+<!--      <a class="nav-link" href="#">Sign out</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+</nav>
+
+<div class="container">
+  <div class="auth-body">
+    <form class="login-form" #mainForm="ngForm" (ngSubmit)="login()">
+      <div class="col-sm-12 form-group" [ngClass]="{'has-error': checkInputError(iEmail)}">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" [(ngModel)]="email" #iEmail="ngModel" email required />
+      </div>
+      <div class="col-sm-12 form-group" [ngClass]="{'has-error': checkInputError(iPassword)}">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" [(ngModel)]="password" #iPassword="ngModel" required />
+      </div>
+      <div class="col-sm-12 form-group">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
