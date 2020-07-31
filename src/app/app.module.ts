@@ -13,10 +13,11 @@ import { IndexComponent } from './app-components/layout/index/index.component';
 import { AppErrorHandler } from './core/app.error-handler';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { AuthGuard } from './core/auth/auth.guard';
+import { HeaderComponent } from './app-components/layout/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent, IndexComponent
+    AppComponent, IndexComponent, HeaderComponent
   ],
   imports: [
     BrowserModule,
