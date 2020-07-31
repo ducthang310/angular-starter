@@ -15,6 +15,7 @@ import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { AuthGuard } from './core/auth/auth.guard';
 import { HeaderComponent } from './app-components/layout/header/header.component';
 import { FooterComponent } from './app-components/layout/footer/footer.component';
+import { UiModule } from './shared/ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FooterComponent } from './app-components/layout/footer/footer.component
         }
       }
     }),
+    UiModule,
   ],
   providers: [
     {
