@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './pages/logout/logout.component';
+import { UiModule } from '../../shared/ui/ui.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { LogoutComponent } from './pages/logout/logout.component';
     CommonModule,
     RouterModule,
     AuthRoutingModule,
-    FormsModule
+    FormsModule,
+    UiModule
   ]
 })
 export class AuthModule { }
