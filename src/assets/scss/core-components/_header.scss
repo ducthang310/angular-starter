@@ -9,7 +9,7 @@
 
 .header-logo {
   font-family: 'Jura', sans-serif;
-  color: $primary-color;
+  color: $logo-color;
   font-size: 26px;
   font-weight: bold;
   height: 35px;
@@ -29,7 +29,7 @@
   }
 
   &:hover {
-    color: $primary-color;
+    color: $logo-color;
     text-decoration: none;
     opacity: 0.8;
   }
